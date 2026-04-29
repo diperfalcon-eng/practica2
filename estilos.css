@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+
+#titulo h1 {
+    font-size: 60px;
+}
+
+#subtitulo h2 {
+    font-size: 30px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #7e0bab;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #0f3460;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+
+.empty {
+    background-color: #0f3460;
+    cursor: default;
+}
+
+ 
+@media (max-width: 600px) {
+
+    #titulo h1 {
+        font-size: 40px;
+    }
+
+    #subtitulo h2 {
+        font-size: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+}
